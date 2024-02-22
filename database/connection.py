@@ -87,14 +87,14 @@ class Database:
         return False
 
     # column 값으로 여러 Documents 가져오기
-    async def getsbyconditions(self, conditions:dict) -> [Any]:
+    async def getsbyconditions(self, conditions:dict) -> Any:
         documents = await self.model.find(conditions).to_list()  # find({})
         if documents:
             return documents
         return False    
     
     async def getsbyconditionswithpagination(self
-                                             , conditions:dict, page_number) -> [Any]:
+                                             , conditions:dict, page_number) -> Any:
         # find({})
         total = await self.model.find(conditions).count()
         pagination = Paginations(total_records=total, current_page=page_number)
