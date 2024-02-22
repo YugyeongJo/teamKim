@@ -13,7 +13,8 @@ ENV JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
 WORKDIR /app
 
 ARG BRANCH_NAME=data_engineers
-ARG DIR_NAME=teamKim # 변경 대상
+ARG DIR_NAME=teamKim
+# 변경 대상
 
 # Clone the Git repository. Here we dynamically specify the repository name using the variable defined earlier.
 RUN git clone https://github.com/skymined/teamKim ${DIR_NAME}
