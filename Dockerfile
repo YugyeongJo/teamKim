@@ -16,7 +16,7 @@ ARG BRANCH_NAME=data_engineers
 ARG DIR_NAME=teamKim # 변경 대상
 
 # Clone the Git repository. Here we dynamically specify the repository name using the variable defined earlier.
-RUN git clone https://github.com/kdj0712/teamKim ${DIR_NAME}
+RUN git clone https://github.com/skymined/teamKim ${DIR_NAME}
 
 # Changes the working directory to /app/${REPO_NAME}. This uses the variable to dynamically set the directory path.
 WORKDIR /app/${DIR_NAME}
